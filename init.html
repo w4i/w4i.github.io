@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="google-site-verification" content="OjGymv9uAqWYDsr-E-j6DG2k1_mPXsDQF77kgEK0nz8">
+  <meta name="msvalidate.01" content="5C84BC77E02800759CE29C4ACCE487BD">
+  <meta name="baidu-site-verification" content="code-IMEJ0TzZ52">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.0/css/all.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"w4i.github.io","root":"/","scheme":"Muse","version":"8.0.1","exturl":true,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+
+  <meta name="description" content="[TOC] 开始安装好Node.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初始化">
+<meta property="og:url" content="https://w4i.github.io/init.html">
+<meta property="og:site_name" content="w4i">
+<meta property="og:description" content="[TOC] 开始安装好Node.js">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-02T18:05:14.000Z">
+<meta property="article:modified_time" content="2020-10-13T12:52:33.916Z">
+<meta property="article:author" content="w4i">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://w4i.github.io/init.html">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>初始化 | w4i</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">w4i</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B"><span class="nav-number">1.</span> <span class="nav-text">开始</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C"><span class="nav-number">3.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E6%96%87%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">生成静态网页文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">5.</span> <span class="nav-text">部署到服务器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%8C%E6%88%90"><span class="nav-number">6.</span> <span class="nav-text">完成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6SEO"><span class="nav-number">7.</span> <span class="nav-text">百度SEO</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE%E6%A8%A1%E5%9D%97"><span class="nav-number">7.1.</span> <span class="nav-text">安装站点地图模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-1"><span class="nav-number">7.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%BB%E5%8A%A8%E6%8E%A8%E9%80%81%E6%A8%A1%E5%9D%97"><span class="nav-number">7.3.</span> <span class="nav-text">安装主动推送模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-2"><span class="nav-number">7.4.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%A9%E7%9F%ADurl"><span class="nav-number">7.5.</span> <span class="nav-text">缩短url</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT%E9%98%B2%E6%AD%A2%E5%A4%96%E9%93%BE%E6%90%9C%E7%B4%A2%E5%8F%8ASEO%E8%AE%BE%E7%BD%AE"><span class="nav-number">7.6.</span> <span class="nav-text">NexT防止外链搜索及SEO设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#quicklink%E5%8A%A0%E8%BD%BD%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="nav-number">7.7.</span> <span class="nav-text">quicklink加载性能优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#robots-txt"><span class="nav-number">7.8.</span> <span class="nav-text">robots.txt</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B0%B7%E6%AD%8CSEO"><span class="nav-number">8.</span> <span class="nav-text">谷歌SEO</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E7%AB%99%E7%82%B9%E5%9C%B0%E5%9B%BE%E6%A8%A1%E5%9D%97-1"><span class="nav-number">8.1.</span> <span class="nav-text">安装站点地图模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-3"><span class="nav-number">8.2.</span> <span class="nav-text">配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF"><span class="nav-number">9.</span> <span class="nav-text">网页个人信息</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#site"><span class="nav-number">9.1.</span> <span class="nav-text">site</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E9%97%AD%E5%8A%A8%E7%94%BB"><span class="nav-number">10.</span> <span class="nav-text">关闭动画</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0GitHub"><span class="nav-number">11.</span> <span class="nav-text">部署到GitHub</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">w4i</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+      
+
+      
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://w4i.github.io/init.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="w4i">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="w4i">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          初始化
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-03 02:05:14" itemprop="dateCreated datePublished" datetime="2020-10-03T02:05:14+08:00">2020-10-03</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-10-13 20:52:33" itemprop="dateModified" datetime="2020-10-13T20:52:33+08:00">2020-10-13</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>[TOC]</p>
+<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><p>安装好Node.js</p>
+<a id="more"></a>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install hexo-theme-next</span><br></pre></td></tr></table></figure>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p><code>_config.yml</code>的<code>theme: landscape</code>改成下面的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<h1 id="生成静态网页文件"><a href="#生成静态网页文件" class="headerlink" title="生成静态网页文件"></a>生成静态网页文件</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<h1 id="部署到服务器"><a href="#部署到服务器" class="headerlink" title="部署到服务器"></a>部署到服务器</h1><p><code>blog/public</code>下所有文件复制到nginx的web服务器根目录</p>
+<h1 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h1><p><span class="exturl" data-url="aHR0cHM6Ly93ZWlsaW5pbmcuY2Yv">https://weilining.cf<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="百度SEO"><a href="#百度SEO" class="headerlink" title="百度SEO"></a>百度SEO</h1><h2 id="安装站点地图模块"><a href="#安装站点地图模块" class="headerlink" title="安装站点地图模块"></a>安装站点地图模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-baidu-sitemap</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h2><p><code>_config.yml</code>后面加上以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p><code>hexo cl &amp;&amp; hexo s</code></p>
+<p><span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo0MDAwL2JhaWR1c2l0ZW1hcC54bWw=">http://localhost:4000/baidusitemap.xml<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="安装主动推送模块"><a href="#安装主动推送模块" class="headerlink" title="安装主动推送模块"></a>安装主动推送模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-2"><a href="#配置-2" class="headerlink" title="配置"></a>配置</h2><p><span class="exturl" data-url="aHR0cHM6Ly96aXl1YW4uYmFpZHUuY29tL3NpdGUvaW5kZXgjLw==">百度站点管理<i class="fa fa-external-link-alt"></i></span></p>
+<p>普通收录-&gt;资源提交-&gt;API提交-&gt;推送接口里有token</p>
+<p><code>_config.yml</code>后面加上以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">baidu_url_submit:</span><br><span class="line">  count: 5 ## 提交最新的五个链接</span><br><span class="line">  host: weilining.cf ## 在百度站长平台中注册的域名</span><br><span class="line">  token: your_token ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!</span><br><span class="line">  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里</span><br></pre></td></tr></table></figure>
+
+<p><code>_config.yml</code>的<code>deploy:</code>改成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  - type: &#39;&#39;</span><br><span class="line">  - type: baidu_url_submitter # 主动提交百度爬虫</span><br></pre></td></tr></table></figure>
+
+<p><code>_config.yml</code>的<code>url: http://example.com</code>改成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: https:&#x2F;&#x2F;weilining.cf</span><br></pre></td></tr></table></figure>
+
+<p><code>hexo cl &amp;&amp; hexo d</code>最后出现<code>&#123;&quot;remain&quot;:2996,&quot;success&quot;:2&#125;</code>即可</p>
+<h2 id="缩短url"><a href="#缩短url" class="headerlink" title="缩短url"></a>缩短url</h2><p><code>_config.yml</code>的<code>permalink: :year/:month/:day/:title/</code>改成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">permalink: :title.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="NexT防止外链搜索及SEO设置"><a href="#NexT防止外链搜索及SEO设置" class="headerlink" title="NexT防止外链搜索及SEO设置"></a>NexT防止外链搜索及SEO设置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br><span class="line">vi _config.next.yml</span><br></pre></td></tr></table></figure>
+
+<p><code>_config.next.yml</code>写入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">disable_baidu_transformation: true # 禁用移动设备上的百度转换，建议 true</span><br><span class="line">index_with_subtitle: true # 带副标题的索引,开启后会在标签标题后面自动加上网站名称，建议 true</span><br><span class="line"># nofollow防止外链搜索</span><br><span class="line">exturl: true # 使用Base64加密和解密自动添加外部URL。</span><br><span class="line">baidu_site_verification: code-wFDrn4lvkD</span><br><span class="line">baidu_push: true #建议 true #启用百度推送，这样博客会自动把网址推到百度，这对SEO很有帮助。</span><br></pre></td></tr></table></figure>
+
+<p><code>hexo cl &amp;&amp; hexo s</code></p>
+<h2 id="quicklink加载性能优化"><a href="#quicklink加载性能优化" class="headerlink" title="quicklink加载性能优化"></a>quicklink加载性能优化</h2><p><code>_config.next.yml</code>加入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">quicklink:</span><br><span class="line">  enable: true</span><br><span class="line">  home: true</span><br><span class="line">  archive: true</span><br><span class="line">  delay: true</span><br><span class="line">  timeout: 3000</span><br><span class="line">  priority: true</span><br><span class="line">  ignores:</span><br></pre></td></tr></table></figure>
+
+<h2 id="robots-txt"><a href="#robots-txt" class="headerlink" title="robots.txt"></a>robots.txt</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br><span class="line">vi 	source&#x2F;robots.txt</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Allow: &#x2F;</span><br><span class="line"></span><br><span class="line">Sitemap: https:&#x2F;&#x2F;weilining.cf&#x2F;sitemap.xml</span><br><span class="line">Sitemap: https:&#x2F;&#x2F;weilining.cf&#x2F;baidusitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS93ZWJtYXN0ZXJzL3Rvb2xzL3JvYm90cy10ZXN0aW5nLXRvb2w/dXRtX3NvdXJjZT1zdXBwb3J0Lmdvb2dsZS5jb20vd2VibWFzdGVycy8mdXRtX21lZGl1bT1yZWZlcnJhbCZ1dG1fY2FtcGFpZ249NjA2MjU5OA==">打开“robots.txt 测试工具”<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="谷歌SEO"><a href="#谷歌SEO" class="headerlink" title="谷歌SEO"></a>谷歌SEO</h1><h2 id="安装站点地图模块-1"><a href="#安装站点地图模块-1" class="headerlink" title="安装站点地图模块"></a>安装站点地图模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-3"><a href="#配置-3" class="headerlink" title="配置"></a>配置</h2><p><code>_config.yml</code>后面加上以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p><code>hexo cl &amp;&amp; hexo s</code></p>
+<p><span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo0MDAwL3NpdGVtYXAueG1s">http://localhost:4000/sitemap.xml<i class="fa fa-external-link-alt"></i></span></p>
+<p><code>_config.next.yml</code>加上以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">google_site_verification: KZjcRcBkV43JHcyiH4z1Yk2xu-mqlS1fQNk5Dzv7_q0</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="网页个人信息"><a href="#网页个人信息" class="headerlink" title="网页个人信息"></a>网页个人信息</h1><h2 id="site"><a href="#site" class="headerlink" title="site"></a>site</h2><p><code>_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: Ln&#39;s Blog</span><br><span class="line">subtitle: &#39;有朋自远方来，不亦乐乎&#39;</span><br><span class="line">description: &#39;算法、技术&#39;</span><br><span class="line">keywords:</span><br><span class="line">author: Lining Wei</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: &#39;Asia&#x2F;ShangHai&#39;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>hexo cl &amp;&amp; hexo g</p>
+<h1 id="关闭动画"><a href="#关闭动画" class="headerlink" title="关闭动画"></a>关闭动画</h1><p><code>_config.next.yml</code>加入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">motion:</span><br><span class="line">  enable: false</span><br></pre></td></tr></table></figure>
+
+<h1 id="部署到GitHub"><a href="#部署到GitHub" class="headerlink" title="部署到GitHub"></a>部署到GitHub</h1><p>安装模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<p>配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  - type: git</span><br><span class="line">    repo: git@github.com:weilining&#x2F;hexo.io.git # 使用仓库的ssh地址</span><br><span class="line">    branch: master</span><br><span class="line">    token: &#39;f7e4ee8c4b57d3fab8c0680e192c2a180fa111f6&#39;</span><br><span class="line">    message: message # git commit -m &quot;message&quot;</span><br><span class="line">    name: weilining</span><br><span class="line">    email: email@163.com</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">w4i</span>
+</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9tdXNlLw==">NexT.Muse</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink.listen({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://w4i.github.io/init.html',]
+      });
+      });
+  </script>
+
+</body>
+</html>
